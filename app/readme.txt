@@ -1,0 +1,1 @@
+Se trato de crear dos tipos de cards en las cuales podemos escoger si irnos hacia la finanzas o hacia los habitos pero tuve un problema con la creacion de proyecto cree una que no era por eso no puedo usar el @compose no me deja usarlo y perdi mucho tiempo en ese proyecto
