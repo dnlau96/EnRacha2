@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">EnRacha2</string>
+    <string name="nameapp">NameApp</string>
+    <string name="enracha2">EnRacha2</string>
+    <string name="financecard">FinanceCard</string>
+    <string name="habitoscard">HabitosCard</string>
+    <string name="finanzas">Finanzas</string>
+    <string name="habitos">Habitos</string>
 </resources>
