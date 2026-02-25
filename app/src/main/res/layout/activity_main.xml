@@ -63,4 +63,7 @@
         tools:ignore="MissingConstraints,ImageContrastCheck"
         tools:layout_editor_absoluteY="277dp" />
 
+    <androidx.constraintlayout.widget.Group android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

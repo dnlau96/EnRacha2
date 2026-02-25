@@ -11,6 +11,7 @@ import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
@@ -30,6 +31,32 @@ class MainActivity : AppCompatActivity() {
         habitosButton.setOnClickListener {
             val intent = Intent(this, HabitosActivity::class.java)
             startActivity(intent)
+        }
+    }
+}
+
+@Composable
+fun AppNavigation() {
+    val navController = rememberNavController()
+    // Intervalos más pequeños: 10 seg, 30 seg, 1 min
+    var intervaloSegundos by remember { mutableStateOf(10) }
+
+    NavHost(navController = navController, startDestination = "reloj") {
+        composable("reloj") {
+            RelojLoveScreen(
+                intervalo = intervaloSegundos,
+                onNavigateToSettings = { navController.navigate("settings") }
+            )
+        }
+        composable("settings") {
+            SettingsLoveScreen(
+                intervaloActual = intervaloSegundos,
+                onIntervaloSelected = { nuevo ->
+                    intervaloSegundos = nuevo
+                    navController.popBackStack()
+                },
+                onBack = { navController.popBackStack() }
+            )
         }
     }
 }
